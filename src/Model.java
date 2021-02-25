@@ -19,7 +19,7 @@ public class Model {
             int currentRoom = 1;
 
             while (currentRoom != 0) {
-                String strSelect = "select body from story where id = " + currentRoom;
+                String strSelect ="select body from story where id = " + currentRoom;
 
                 ResultSet rset = stmt.executeQuery(strSelect);
                 while (rset.next()) {
@@ -51,7 +51,7 @@ public class Model {
                     int input = scan.nextInt();
                     // den gör om man väljer 2 då får man om frågorna
                     while (input < 1 || input > storyLinks.size()) {
-                        System.out.println("Du har svarat fel" + "");
+                        System.out.println("Du har svarat fel  " + "");
                         input = scan.nextInt();
                     }
                     currentRoom = storyLinks.get(input -1);
